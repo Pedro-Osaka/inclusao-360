@@ -1,0 +1,357 @@
+/* Inclusão 360° 4.0 — hierarquia simples, menus legíveis e divulgação progressiva. */
+:root { scroll-behavior:smooth; }
+[hidden] { display:none !important; }
+html { scroll-padding-top:6.5rem; }
+section[id] { scroll-margin-top:6.5rem; }
+body { overflow-x:clip; }
+.container { width:min(100% - 2.5rem,1120px); }
+.site-header { position:sticky;top:0;z-index:45;box-shadow:0 2px 16px rgba(9,37,63,.045); }
+.header-inner { min-height:5.2rem;gap:1rem; }
+.desktop-nav { gap:.4rem;flex-wrap:wrap;justify-content:center; }
+.desktop-nav a {padding:.75rem 1rem;display:inline-flex;align-items:center;min-height:44px;border-radius:.6rem;color:var(--ink);font-size:.85rem;line-height:1.35;text-decoration:none;}
+.desktop-nav a:hover {text-decoration:none;background:var(--surface-alt);color:var(--ink);}
+.desktop-nav a[aria-current="location"] {background:var(--aqua-soft);color:var(--ink);}
+.header-access {min-height:44px;white-space:nowrap;}
+.hero {padding:5rem 0 4rem;}
+.hero-grid {align-items:center;gap:clamp(2.2rem,5vw,5rem);}
+.hero h1 {max-width:660px;font-size:clamp(2.25rem,4.35vw,4.25rem);line-height:1.13;letter-spacing:-.055em;}
+.hero-subtitle {max-width:570px;font-size:1.05rem;line-height:1.75;}
+.hero-actions {display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;margin:1.65rem 0 1rem;}
+.hero-actions .button {max-width:100%;}
+.hero-note {margin-top:1rem;}
+.hero-showcase {align-self:center;}
+.hero .eyebrow {font-size:.72rem;letter-spacing:.1em;}
+.hero .floating-bubble, .hero .orbit-art, .hero .showcase-glow{display:none!important;}
+.hero .showcase-browser {transform:none!important;box-shadow:0 25px 70px rgba(13,42,70,.09)!important;}
+.hero .showcase-footnote {margin-top:.65rem;}
+/* Clearly distinguish the three entry points from section navigation */
+.journey-steps {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:0 auto 3.5rem;}
+.journey-steps a {min-width:0;display:flex;align-items:center;gap:1rem;padding:1.15rem 1.25rem;border:1px solid var(--border);border-radius:1rem;text-decoration:none!important;background:var(--surface);color:var(--ink);box-shadow:0 8px 25px rgba(9,37,63,.04);}
+.journey-steps a:hover {border-color:var(--aqua);text-decoration:none;transform:translateY(-1px);}
+.journey-steps .step-n {display:grid;place-items:center;width:2.55rem;height:2.55rem;border-radius:.7rem;background:var(--aqua-soft);color:var(--ink);font-size:.8rem;font-weight:850;flex-shrink:0;}
+.journey-steps a>span:nth-child(2) {display:grid;gap:.2rem;flex:1;min-width:0;}
+.journey-steps a strong {font-size:.91rem;letter-spacing:-.02em;}
+.journey-steps a small {font-size:.75rem;color:var(--ink-soft);line-height:1.5;}
+.journey-steps a>span:last-child {color:#0a9288;font-weight:700;}
+/* Card row: three understandable main examples. The other two are optional. */
+.quick-section {padding-top:4.3rem;padding-bottom:4.5rem;}
+.quick-intro {display:block;max-width:810px;margin-bottom:2rem;}
+.quick-intro h2 {max-width:800px;font-size:clamp(1.95rem,3.45vw,3.35rem);line-height:1.13;}
+.quick-intro>p {max-width:600px;margin-top:.9rem!important;font-size:1.04rem;line-height:1.7;}
+.quick-section>.container>.quick-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem;}
+.quick-section>.container>.quick-grid>.quick-card {grid-column:auto!important;padding:1.55rem;border-radius:1rem;box-shadow:0 8px 30px rgba(9,37,63,.035);}
+.quick-card h3 {font-size:1.28rem;}
+.quick-card .quick-btn {min-height:3rem;font-weight:750;}
+.extra-demos {margin-top:1.25rem;}
+.more-demos-toggle {width:100%;max-width:490px;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:1.1rem 1.2rem;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:.9rem;font-weight:760;line-height:1.5;text-align:left;min-height:3.25rem;}
+.more-demos-toggle:hover {border-color:var(--aqua);background:var(--surface-alt);}
+.more-demos-toggle[aria-expanded="true"] span {transform:rotate(45deg);}
+.more-demos-content:not([hidden]) {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem;}
+.more-demos-content>.quick-card {grid-column:auto!important;min-width:0;}
+/* A mission is the next visible landmark, not one of twelve sections. */
+.mission-section {padding-top:4rem;padding-bottom:4rem;}
+.mission-copy h2 {font-size:clamp(1.9rem,3.4vw,3.2rem);}
+.libras-section {padding-top:5rem;padding-bottom:5rem;}
+.takeaway {padding:3.4rem 0;background:var(--surface-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.takeaway-inner {display:flex;align-items:center;gap:1.35rem;}
+.takeaway-icon {width:3.2rem;height:3.2rem;display:grid;place-items:center;background:#0c867c;color:white;border-radius:50%;font-weight:850;font-size:1.4rem;flex:0 0 auto;}
+.takeaway h2 {font-size:clamp(1.5rem,2.5vw,2.1rem);letter-spacing:-.035em;margin:0 0 .3rem;}
+.takeaway p {color:var(--ink-soft);max-width:690px;line-height:1.7;font-size:.95rem;margin:0;}
+.takeaway .button {margin-left:auto;white-space:nowrap;}
+/* Extra learning modules stay intact, but don't compete with the core experience. */
+.more-hub {background:var(--paper);padding:5rem 0;}
+.more-hub-inner {border:1px solid var(--border);border-radius:1.3rem;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(200px,.7fr);gap:1.25rem;overflow:hidden;background:var(--surface);}
+.more-hub-copy {padding:clamp(1.5rem,4vw,3.2rem);min-width:0;}
+.more-hub h2 {font-size:clamp(2rem,3vw,3rem);letter-spacing:-.055em;margin:.45rem 0 .75rem;color:var(--ink);}
+.more-hub p {color:var(--ink-soft);line-height:1.75;max-width:600px;margin:0 0 1.5rem;}
+.more-hub-visual {background:#092949;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1rem;color:#e8f7f7;padding:2rem;}
+.more-hub-visual span {font-size:.7rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:#91e3d6;}
+.more-hub-visual strong {font-size:clamp(1.8rem,3vw,2.9rem);line-height:1.05;letter-spacing:-.04em;}
+.more-hub-visual small {font-size:.84rem;line-height:1.55;color:#c4d9e6;}
+#advanced-content {border-top:1px solid var(--border);}
+#advanced-content>.section:nth-child(even) {background:var(--surface-alt);}
+#advanced-content .section {scroll-margin-top:6rem;}
+/* High-contrast, coherent footer. The screenshot showed tiny underlined links cramped together. */
+.site-footer {background:#0a2945;color:#eef7f9;}
+.footer-main {padding:2.5rem 0;min-height:unset;align-items:flex-start;gap:3rem;}
+.footer-about {max-width:340px;}
+.footer-logo {display:inline-block;font-size:1.52rem;letter-spacing:-.055em;font-weight:850;color:#fff;text-decoration:none!important;}
+.footer-logo span {color:#88ead9;}
+.footer-about p {color:#d0e4ec;line-height:1.7;font-size:.88rem;margin:.7rem 0 0;}
+.footer-links {max-width:650px;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.5rem .65rem;}
+.footer-links a,.footer-links button {display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid rgba(226,244,249,.34);background:rgba(255,255,255,.055);padding:.7rem 1rem;border-radius:.6rem;color:#fff;font-size:.86rem;font-weight:700;line-height:1.4;text-decoration:none;text-align:center;}
+.footer-links a:hover,.footer-links button:hover {text-decoration:underline;background:rgba(255,255,255,.16);border-color:#a7eadc;color:#fff;}
+.footer-bottom {border-color:rgba(255,255,255,.22);color:#d7e6eb;}
+/* Link highlighting is respected, without the unreadable gradient behind footer links. */
+body[data-links="true"] .site-footer .footer-links a {background-image:none!important;text-decoration:none!important;}
+body[data-links="true"] .journey-steps a {background-image:none!important;text-decoration:none!important;}
+body[data-links="true"] .footer-logo {background-image:none!important;}
+/* The original v3 blanket quick-grid styles accidentally affect the modal too. */
+.access-dialog .quick-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem;}
+.access-dialog .quick-grid button {grid-column:auto;}
+/* Never sacrifice foreground legibility for the visual theme. */
+body[data-theme="dark"] .journey-steps a,body[data-theme="dark"] .more-hub-inner {background:var(--surface);}
+body[data-theme="dark"] .takeaway {background:var(--surface-alt);}
+body[data-contrast="true"] .takeaway-icon {background:#000;color:#fff;}
+body[data-contrast="true"] .more-hub-visual {background:#000;color:#fff;}
+body[data-contrast="true"] .footer-links a,body[data-contrast="true"] .footer-links button {border-color:#fff;}
+@media(max-width:1050px) {
+ .desktop-nav {gap:0;}
+ .desktop-nav a {padding:.6rem;}
+ .header-access {max-width:180px;white-space:normal;}
+ .hero {padding:3.5rem 0;}
+}
+@media(max-width:780px) {
+ html {scroll-padding-top:5rem;}
+ .site-header {position:relative;}
+ .desktop-nav {display:none;}
+ .mobile-nav {display:block;}
+ .journey-steps {grid-template-columns:1fr;gap:.55rem;margin-top:.2rem;margin-bottom:2rem;}
+ .journey-steps a {min-height:4.4rem;padding:.7rem 1rem;}
+ .hero {padding:3.25rem 0 2.8rem;}
+ .hero-grid {gap:2.5rem;}
+ .quick-section>.container>.quick-grid {grid-template-columns:1fr;}
+ .more-demos-content:not([hidden]) {grid-template-columns:1fr;}
+ .more-hub-inner {grid-template-columns:1fr;}
+ .more-hub-visual {padding:1.4rem 1.7rem;}
+ .footer-main {flex-direction:column;gap:1.7rem;}
+ .footer-links {justify-content:flex-start;}
+ .takeaway-inner {flex-wrap:wrap;align-items:flex-start;}
+ .takeaway .button {margin-left:0;}
+ .access-dialog .quick-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:490px) {
+ .container {width:min(100% - 1.8rem,1120px);}
+ .brand-name {font-size:1.18rem;}
+ .brand-symbol {height:2.4rem;width:2.4rem;}
+ .brand-name small {font-size:.42rem;}
+ .header-access {max-width:150px;padding:.55rem;font-size:.72rem;}
+ .header-access svg:last-child {display:none;}
+ .hero {padding:2.5rem 0;}
+ .hero h1 {font-size:clamp(2.05rem,9.4vw,2.7rem);}
+ .hero-actions {display:grid;grid-template-columns:1fr;}
+ .hero-actions>.button {width:100%;}
+ .quick-intro h2 {font-size:clamp(1.75rem,8.5vw,2.4rem);}
+ .footer-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;}
+ .footer-links button {grid-column:span 2;}
+ .footer-links a,.footer-links button {padding:.6rem .5rem;word-break:normal;overflow-wrap:anywhere;}
+ .footer-bottom {display:flex;flex-direction:column;align-items:flex-start;padding:1.5rem 0;}
+ .takeaway .button {width:100%;}
+ .more-hub-copy {padding:1.35rem;}
+ .more-hub h2 {font-size:1.8rem;}
+}
+@media(prefers-reduced-motion:reduce) {
+ html {scroll-behavior:auto;}
+ .journey-steps a {transform:none!important;}
+}
+/* Compact accessible header action on small screens, including 150% text. */
+@media(max-width:490px) {
+ .header-access {width:46px;min-width:46px;max-width:46px;min-height:46px;flex:0 0 46px;padding:0;display:grid;place-items:center;}
+ .header-access span,.header-access svg.tiny {display:none!important;}
+ .header-access svg.ico:not(.tiny) {font-size:1.15rem;width:1.4rem;height:1.4rem;}
+ .header-inner {gap:.5rem;}
+ .brand {min-width:0;}
+}
+/* Remove inherited v3 double spacing: show the first action without excessive scrolling. */
+.hero {padding:3.15rem 0 2.6rem;}
+.hero-grid {min-height:0;padding:0;}
+.hero-showcase {padding:0;}
+@media(max-width:780px) {
+ .hero {padding:2.6rem 0 2rem;}
+ .hero-grid {padding:0;}
+}
+@media(max-width:490px) {
+ .hero {padding:2.1rem 0 1.6rem;}
+}
+
+
+/* 4.1 visual cleanup: only content links receive extra emphasis when link highlighting is active. */
+body[data-links="true"] .libras-doc-link,
+body[data-links="true"] .journey-list a,
+body[data-links="true"] .vision-right a,
+body[data-links="true"] .text-link,
+body[data-links="true"] .copy-phrase,
+body[data-links="true"] .example-link,
+body[data-links="true"] .tour-hero-link,
+body[data-links="true"] .mission-footer .text-link {
+  background-image:none!important;
+  box-shadow:none!important;
+  text-decoration:underline!important;
+  text-decoration-thickness:2px!important;
+  text-underline-offset:4px!important;
+}
+body[data-links="true"] .desktop-nav a,
+body[data-links="true"] .mobile-nav-links a,
+body[data-links="true"] .journey-steps a,
+body[data-links="true"] .footer-links a,
+body[data-links="true"] .libras-doc-link,
+body[data-links="true"] .journey-list a,
+body[data-links="true"] .vision-right a,
+body[data-links="true"] .text-link {
+  background-image:none!important;
+  box-shadow:none!important;
+}
+/* Interactive controls that are anchors must always look like buttons, even when link highlighting is enabled. */
+a.button,
+a.quick-btn,
+.button,
+.quick-btn,
+.more-demos-toggle,
+.footer-links button,
+.preview-toolbar button,
+.quick-grid button {
+  text-decoration:none!important;
+  background-image:none!important;
+  box-shadow:none;
+}
+a.button:hover,
+a.quick-btn:hover,
+.button:hover,
+.quick-btn:hover {
+  text-decoration:none!important;
+}
+/* .button / .quick-btn preserve their variant foreground colors; do not inherit text color. */
+.quick-btn {
+  align-items:center;
+}
+.quick-btn[aria-pressed="true"],
+.quick-btn.is-active {
+  background:#0c806f!important;
+  border-color:#0c806f!important;
+  color:#fff!important;
+}
+.quick-btn.quick-btn-secondary {
+  color:var(--ink)!important;
+}
+.quick-btn.quick-btn-secondary:hover {
+  color:var(--ink)!important;
+}
+/* Keep footer and top navigation readable when links are highlighted. */
+.footer-links a, .footer-links button, .desktop-nav a, .mobile-nav-links a {
+  background-clip:padding-box;
+}
+.libras-doc-link {
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  padding:.15rem 0;
+}
+body[data-links="true"] .libras-doc-link {
+  color:#e9fffb!important;
+}
+body[data-links="true"] .desktop-nav a,
+body[data-links="true"] .mobile-nav-links a,
+body[data-links="true"] .footer-links a {
+  color:inherit!important;
+}
+/* Footer buttons and links should stay pill-like and clean. */
+.footer-links a, .footer-links button {
+  text-decoration:none!important;
+}
+.footer-links a:hover, .footer-links button:hover {
+  text-decoration:none!important;
+}
+/* Optional highlight style for navigation links: subtle underline only. */
+body[data-links="true"] .desktop-nav a:hover,
+body[data-links="true"] .mobile-nav-links a:hover,
+body[data-links="true"] .footer-links a:hover {
+  text-decoration:underline!important;
+}
+
+/* 4.1 patch B: links that already look like buttons/cards should never gain underlines. */
+body[data-links="true"] a.quick-btn,
+body[data-links="true"] a.quick-btn *,
+body[data-links="true"] .journey-steps a,
+body[data-links="true"] .journey-steps a *,
+body[data-links="true"] .desktop-nav a,
+body[data-links="true"] .desktop-nav a *,
+body[data-links="true"] .mobile-nav-links a,
+body[data-links="true"] .mobile-nav-links a *,
+body[data-links="true"] .footer-links a,
+body[data-links="true"] .footer-links a * {
+  text-decoration:none!important;
+  background-image:none!important;
+}
+body[data-links="true"] .desktop-nav a:hover,
+body[data-links="true"] .mobile-nav-links a:hover,
+body[data-links="true"] .footer-links a:hover,
+body[data-links="true"] .journey-steps a:hover,
+body[data-links="true"] a.quick-btn:hover {
+  text-decoration:none!important;
+}
+
+/* 4.1 patch C: restore the intended appearance of quick-demo buttons.
+   The accessibility dialog uses a quick-grid too, so we scope the demo buttons explicitly. */
+.quick-section .quick-btn,
+.more-demos-content .quick-btn {
+  display:inline-flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:.7rem!important;
+  width:auto!important;
+  min-height:2.95rem!important;
+  padding:.7rem .85rem!important;
+  margin-top:auto;
+  background:#0b3156!important;
+  border:1px solid #0b3156!important;
+  border-radius:.55rem!important;
+  color:#fff!important;
+  text-align:left!important;
+}
+.quick-section .quick-btn:hover,
+.more-demos-content .quick-btn:hover {
+  background:#194b70!important;
+  border-color:#194b70!important;
+  color:#fff!important;
+}
+.quick-section .quick-btn[aria-pressed="true"],
+.more-demos-content .quick-btn[aria-pressed="true"] {
+  background:#0c806f!important;
+  border-color:#0c806f!important;
+  color:#fff!important;
+}
+.quick-section .quick-btn-secondary,
+.more-demos-content .quick-btn-secondary {
+  background:var(--surface-alt)!important;
+  border-color:var(--line)!important;
+  color:var(--ink)!important;
+}
+.quick-section .quick-btn-secondary:hover,
+.more-demos-content .quick-btn-secondary:hover {
+  background:var(--aqua-soft)!important;
+  border-color:var(--aqua)!important;
+  color:var(--ink)!important;
+}
+
+/* 5.2 — Primary action contrast: dark blue buttons use white foreground.
+   The high-contrast theme retains its own light/dark color pairing. */
+body:not([data-contrast="true"]) .button-primary,
+body:not([data-contrast="true"]) .button-primary:hover,
+body:not([data-contrast="true"]) .button-primary:focus-visible {
+  color:#fff;
+}
+body:not([data-contrast="true"]) .button-primary svg {
+  color:inherit;
+  stroke:currentColor;
+}
+/* Preserve the high contrast palette during hover/focus and active states. */
+body[data-contrast="true"] .button-primary,
+body[data-contrast="true"] .button-primary:hover,
+body[data-contrast="true"] .button-primary:focus-visible,
+body[data-contrast="true"] .button-primary:active {
+  background:var(--ink)!important;
+  color:var(--paper)!important;
+  border-color:var(--ink)!important;
+}
+body[data-theme="dark"][data-contrast="true"] .button-primary,
+body[data-theme="dark"][data-contrast="true"] .button-primary:hover,
+body[data-theme="dark"][data-contrast="true"] .button-primary:focus-visible,
+body[data-theme="dark"][data-contrast="true"] .button-primary:active {
+  background:#fff!important;
+  color:#000!important;
+  border-color:#fff!important;
+}
+body[data-contrast="true"] .button-primary {transition:none!important;}
+/* Avoid transient low-contrast frames when theme or hover states change. */
+.button-primary {transition:transform .2s ease, box-shadow .2s ease;}
