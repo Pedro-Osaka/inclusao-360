@@ -3,11 +3,11 @@
 # Inclusão 360°
 
 > **Status: concluído (v5.2).** Projeto acadêmico **individual**.
-> **Demo ao vivo:** https://pedrosilva-c.github.io/inclusao-360/
+> **Demo ao vivo:** https://pedro-osaka.github.io/inclusao-360/
 
 Site demonstrativo de **acessibilidade digital**: em vez de só explicar o tema, ele deixa o visitante experimentar recursos de acessibilidade e corrigir, ele mesmo, um portal fictício cheio de problemas.
 
-**[Demo ao vivo](https://pedrosilva-c.github.io/inclusao-360/)** · **[Portfólio](https://pedrosilva-c.github.io/portfolio/)** · **[Perfil no GitHub](https://github.com/pedrosilva-c)**
+**[Demo ao vivo](https://pedro-osaka.github.io/inclusao-360/)** · **[Portfólio](https://pedro-osaka.github.io/portfolio/)** · **[Perfil no GitHub](https://github.com/Pedro-Osaka)**
 
 ## Problema
 
@@ -47,7 +47,7 @@ Página inicial publicada no GitHub Pages (captura de 13/11/2026). O projeto tam
 ## Como executar
 
 ```powershell
-git clone https://github.com/pedrosilva-c/inclusao-360.git
+git clone https://github.com/Pedro-Osaka/inclusao-360.git
 cd inclusao-360
 py -m http.server 8080        # ou: iniciar-site.bat
 # abra http://localhost:8080
@@ -67,6 +67,6 @@ py -m http.server 8080        # ou: iniciar-site.bat
 
 ## Autor e créditos
 
-**Pedro Henrique da Silva Pereira** · projeto individual · [Portfólio](https://pedrosilva-c.github.io/portfolio/) · [LinkedIn](https://www.linkedin.com/in/pedrosilva-sistemas/)
+**Pedro Henrique da Silva Pereira** · projeto individual · [Portfólio](https://pedro-osaka.github.io/portfolio/) · [LinkedIn](https://www.linkedin.com/in/pedrosilva-sistemas/)
 
 Créditos de terceiros: o tradutor de Libras é o widget oficial do [VLibras](https://vlibras.gov.br/), carregado do site do governo federal. Vídeo, legendas, poster e ícones de `assets/` foram produzidos para o projeto.
